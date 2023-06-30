@@ -1,0 +1,37 @@
+.error label {
+    color: #E31C25 !important;
+}
+
+.form-group.dark label {
+    color: #FFFFFF;
+}
+
+.form-group.dark input {
+    color: #FFFFFF;
+    background-color: #2C2C2C;
+}
+
+.form-group input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #BB000E;
+    margin: 7px 0;
+}
+
+.form-group.error input {
+    border: 1px solid #BB000E;
+}
+
+.form-group svg {
+    opacity: 40%;
+    margin-right: 10px;
+}
+
+.form-group.error svg {
+    opacity: 100%;
+    color: #E31C25;
+}
+
+.form-group input:focus-visible {
+    outline: none;
+}
