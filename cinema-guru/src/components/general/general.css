@@ -1,6 +1,12 @@
+/* General */
+
 .error label {
     color: #E31C25 !important;
 }
+
+
+
+/* Form group */
 
 .form-group.dark label {
     color: #FFFFFF;
@@ -14,12 +20,12 @@
 .form-group input {
     display: block;
     border: none;
-    border-bottom: 1px solid #BB000E;
-    margin: 7px 0;
+    border-bottom: 1px solid #E31C25;
+    margin: 5px 0;
 }
 
 .form-group.error input {
-    border: 1px solid #BB000E;
+    border: 1px solid #E31C25;
 }
 
 .form-group svg {
@@ -34,4 +40,30 @@
 
 .form-group input:focus-visible {
     outline: none;
+}
+
+
+
+/* Select group */
+
+.select-group {
+    color: #FFFFFF;
+}
+
+.select-group select:focus-visible {
+    outline: none;
+}
+
+.select-group select {
+    display: block;
+}
+
+.select-group select {
+    border: none;
+    border-bottom: 1px solid #E31C25;
+    color: #FFFFFF;
+    background-color: #2C2C2C;
+    margin: 5px 0;
+    padding: 5px 0;
+    min-width: 200px;
 }
