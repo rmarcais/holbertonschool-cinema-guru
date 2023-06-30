@@ -1,0 +1,25 @@
+import './general.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export default function SearchBar(props) {
+    const { title, setTitle } = props;
+
+    function handleInput(e) {
+        setTitle(e.target.value);
+    }
+
+    return (
+        <input
+        className='search-bar'
+        type='search'
+        placeholder='Search...'
+        value={title}
+        onChange={handleInput}/>
+    );
+}
+
+SearchBar.propTypes = {
+    title: PropTypes.string.isRequired,
+    setTitle: PropTypes.func.isRequired
+}

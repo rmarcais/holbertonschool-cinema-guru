@@ -83,3 +83,32 @@
     opacity: 80%;
     cursor: pointer;
 }
+
+
+
+/* Search bar */
+
+.search-bar {
+    color: #FFFFFF;
+    background-color: #2C2C2C;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 20px;
+}
+
+.search-bar:hover {
+    cursor: pointer;
+}
+
+.search-bar::placeholder {
+    color: #FFFFFF;
+    opacity: 60%;
+}
+
+.search-bar:focus-visible {
+    outline: none;
+}
+
+.search-bar:hover::placeholder {
+    opacity: 100%;
+}
