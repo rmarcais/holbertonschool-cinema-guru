@@ -67,3 +67,19 @@
     padding: 5px 0;
     min-width: 200px;
 }
+
+
+
+/* Button */
+
+.btn {
+    color: #FFFFFF;
+    background-color: #BB000E;
+    border: none;
+    padding: 8px 14px;
+}
+
+.btn:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
