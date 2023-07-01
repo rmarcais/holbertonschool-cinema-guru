@@ -1,6 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Authentication from './routes/auth/Authentication';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -16,15 +17,15 @@ export default function App() {
         setIsLoggedIn(true);
         setUserUsername(res.data.username);
       }
+    }).catch(() => {
+      setIsLoggedIn(false);
+      setUserUsername("");
     });
   });
-//App must return depending on the isLoggedIn state :
-// - true: The Dashboard component (Will be built in later tasks)
-// - false: The Authentication component (Will be built in later tasks)
+
   return (
     <div className="App">
-      {isLoggedIn && <p>wahoouuuuu {userUsername}</p>}
-      {!isLoggedIn && <p>Pas connecté</p>}
+      {!isLoggedIn && <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername}/>}
     </div>
   );
 }

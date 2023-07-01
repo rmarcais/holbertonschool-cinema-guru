@@ -2,6 +2,7 @@ import './general.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 export default function Input(props) {
     const {
@@ -11,7 +12,10 @@ export default function Input(props) {
         value,
         setValue,
         icon,
-        inputAttributes
+        inputAttributes,
+        isPassword,
+        showPassword,
+        setShowPassword
     } = props;
 
     function handleInput(e) {
@@ -22,8 +26,8 @@ export default function Input(props) {
         <div className={className}>
             {icon && <FontAwesomeIcon icon={icon}/>}
             <label>{label}</label>
+            {isPassword && <FontAwesomeIcon id='showPasswordIcon' icon={showPassword ? faEyeSlash : faEye} onClick={setShowPassword}/>}
             <input
-            id="semething"
             type={type}
             value={value}
             onChange={handleInput}
@@ -39,10 +43,16 @@ Input.propTypes = {
     value: PropTypes.any.isRequired,
     setValue: PropTypes.func.isRequired,
     icon: PropTypes.object,
-    inputAttributes: PropTypes.object
+    inputAttributes: PropTypes.object,
+    isPassword: PropTypes.bool,
+    showPassword: PropTypes.bool,
+    setShowPassword: PropTypes.func
 }
 
 Input.defaultProps = {
     icon: null,
-    inputAttributes: null
+    inputAttributes: null,
+    isPassword: false,
+    showPassword: false,
+    setShowPassword: () => {}
 }

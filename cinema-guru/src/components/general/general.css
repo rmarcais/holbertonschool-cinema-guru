@@ -4,9 +4,19 @@
     color: #E31C25 !important;
 }
 
+#showPasswordIcon {
+    margin-left: 5px;
+}
+
 
 
 /* Form group */
+
+.form-group {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+}
 
 .form-group.dark label {
     color: #FFFFFF;
@@ -21,7 +31,9 @@
     display: block;
     border: none;
     border-bottom: 1px solid #E31C25;
-    margin: 5px 0;
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
 }
 
 .form-group.error input {
@@ -76,12 +88,30 @@
     color: #FFFFFF;
     background-color: #BB000E;
     border: none;
-    padding: 8px 14px;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
-.btn:hover {
+.btn.active {
+    background-color: #E31C25;
+}
+
+.btn.hover:hover {
     opacity: 80%;
     cursor: pointer;
+}
+
+.btn svg {
+    margin-right: 5px;
+}
+
+.btn.header {
+    width: 50%;
+    padding: 15px 20px;
+}
+
+.btn.sign {
+    align-self: end;
 }
 
 
