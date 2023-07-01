@@ -38,6 +38,7 @@ export default function Register(props) {
 
             <Button className='btn hover sign'
             text='Sign Up'
+            type='submit'
             icon={faPlus}
             onClick={() => {}}/>
         </div>

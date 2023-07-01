@@ -18,13 +18,12 @@ export default function App() {
         setUserUsername(res.data.username);
       }
     }).catch(() => {
-      setIsLoggedIn(false);
-      setUserUsername("");
     });
   });
 
   return (
     <div className="App">
+      {isLoggedIn && <p>Hello {userUsername}</p>}
       {!isLoggedIn && <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername}/>}
     </div>
   );

@@ -33,7 +33,7 @@
     border-bottom: 1px solid #E31C25;
     margin: 10px 0;
     width: 100%;
-    padding: 0;
+    padding: 5px 0;
 }
 
 .form-group.error input {

@@ -1,4 +1,5 @@
 import './auth.css';
+import axios from 'axios';
 import Login from './Login';
 import Register from './Register';
 import PropTypes from 'prop-types';
@@ -10,22 +11,44 @@ export default function Authentication(props) {
     const [_switch, set_switch] = useState(true);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [wrongCredentials, setWrongCredentials] = useState(false);
 
     const signInUpProps = {
         username,
         password,
         setUsername: setUsername,
-        setPassword
+        setPassword,
+        wrongCredentials,
     };
+
+    function handleSubmit(onSubmit) {
+        onSubmit.preventDefault();
+        const type = _switch ? 'login' : 'register';
+
+        axios.post(`http://localhost:8000/api/auth/${type}`, {username, password})
+        .then((res) => {
+            localStorage.setItem('accessToken', res.data.accessToken);
+            setUserUsername(username);
+            setIsLoggedIn(true);
+            setWrongCredentials(false);
+        })
+        .catch((err) => {
+            setUserUsername("");
+            setIsLoggedIn(false);
+            setWrongCredentials(true);
+        });
+    }
 
     return (
         <div className='authentication'>
-            <form className='authentication-form' onSubmit={(e) => e.preventDefault()}>
+            <form className='authentication-form' onSubmit={handleSubmit}>
                 <Button text='Sign In'
+                type='button'
                 className={_switch ? 'btn header active' : 'btn header'}
                 onClick={() => set_switch(true)}/>
 
                 <Button text='Sign Up'
+                type='button'
                 className={_switch ? 'btn header' : 'btn header active'}
                 onClick={() => set_switch(false)}/>
                 {_switch ? <Login {...signInUpProps}/> : <Register {...signInUpProps}/>}
