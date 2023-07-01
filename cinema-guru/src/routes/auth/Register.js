@@ -10,7 +10,8 @@ export default function Register(props) {
         username,
         password,
         setUsername,
-        setPassword
+        setPassword,
+        wrongCredentials
     } = props;
 
     const [showPassword, setShowPassword] = useState(false);
@@ -22,14 +23,14 @@ export default function Register(props) {
             <Input icon={faUser}
             label='Username:'
             type='text'
-            className='form-group'
+            className={wrongCredentials ? 'form-group error' : 'form-group'}
             value={username}
             setValue={setUsername}/>
 
             <Input icon={faKey}
             label='Password:'
             type={showPassword ? 'text' : 'password'}
-            className='form-group'
+            className={wrongCredentials ? 'form-group error' : 'form-group'}
             value={password}
             setValue={setPassword}
             isPassword={true}
@@ -49,12 +50,14 @@ Register.propTypes = {
     username: PropTypes.string,
     password: PropTypes.string,
     setUsername: PropTypes.func,
-    setPassword: PropTypes.func
+    setPassword: PropTypes.func,
+    wrongCredentials: PropTypes.bool
 }
 
 Register.defaultProps = {
     username: '',
     password: '',
     setUsername: () => {},
-    setPassword: () => {}
+    setPassword: () => {},
+    wrongCredentials: false
 }

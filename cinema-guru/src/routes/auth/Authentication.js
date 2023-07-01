@@ -32,7 +32,7 @@ export default function Authentication(props) {
             setIsLoggedIn(true);
             setWrongCredentials(false);
         })
-        .catch((err) => {
+        .catch(() => {
             setUserUsername("");
             setIsLoggedIn(false);
             setWrongCredentials(true);
