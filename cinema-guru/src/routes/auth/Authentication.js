@@ -44,12 +44,12 @@ export default function Authentication(props) {
             <form className='authentication-form' onSubmit={handleSubmit}>
                 <Button text='Sign In'
                 type='button'
-                className={_switch ? 'btn header active' : 'btn header'}
+                className={_switch ? 'btn btn-header active' : 'btn btn-header'}
                 onClick={() => set_switch(true)}/>
 
                 <Button text='Sign Up'
                 type='button'
-                className={_switch ? 'btn header' : 'btn header active'}
+                className={_switch ? 'btn btn-header' : 'btn btn-header active'}
                 onClick={() => set_switch(false)}/>
                 {_switch ? <Login {...signInUpProps}/> : <Register {...signInUpProps}/>}
             </form>
