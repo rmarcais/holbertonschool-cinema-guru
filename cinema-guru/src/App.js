@@ -11,7 +11,6 @@ export default function App() {
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
     const headers = {authorization: `Bearer ${accessToken}`}
-
     if (accessToken) {
       axios.post('http://localhost:8000/api/auth', {}, { headers })
       .then((res) => {
@@ -22,7 +21,7 @@ export default function App() {
         setUserUsername("");
       });
     }
-  });
+  }, []);
 
   return (
     <div className="App">
