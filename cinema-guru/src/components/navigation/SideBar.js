@@ -12,11 +12,11 @@ export default function SideBar() {
     const [activities, setActivities] = useState([]);
     const [showActivitiesboolean, setShowActivitiesboolean] = useState(false);
 
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
 
     function setPage(pageName) {
         setSelected(pageName);
-        //navigate(`/${pageName}`);
+        navigate(`/${pageName}`);
     }
 
     useEffect(() => { 
