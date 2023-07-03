@@ -1,0 +1,41 @@
+/* Tags */
+
+.tag {
+    border: solid 1px #E31C25;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tag.selected {
+    background-color: #E31C25;
+}
+
+
+
+/* Filter */
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter .left-part {
+    width: 100%;
+}
+
+.filter .inputs {
+    display: flex;
+    align-items: center;
+}
+
+.filter .right-part {
+    max-width: 550px;
+}
+
+.filter .tags {
+    list-style: none;
+}
