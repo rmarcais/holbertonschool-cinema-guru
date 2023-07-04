@@ -63,7 +63,7 @@ export default function Filter(props) {
             
             <div className='right-part'>
                 <ul className='tags'>
-                    {tags.map((genre) => <Tag key={genre} genre={genre} genres={genres.split(',')} setGenres={setGenres}/>)}
+                    {tags.map((genre) => <Tag key={genre} genre={genre} genres={genres.split(',')} setGenres={setGenres} filter={true}/>)}
                 </ul>
             </div>
             
