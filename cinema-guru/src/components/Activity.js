@@ -11,13 +11,18 @@ export default function Activity(props) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = date.toLocaleDateString('en-US', options);
     let watchList;
+    const type = activity.activityType
 
-    if (activity.activityType === 'favorite') watchList = 'favorites';
-    else if (activity.activityType === 'watchlater') watchList = "watch later";
+    if (type === 'favorite' || type === 'removeFavorited') watchList = 'favorites';
+    else if (type === 'watchLater' || type === 'removeWatchLater') watchList = "watch later";
 
     return (
         <li className='activity'>
-            <p><span className='red'>{username}</span> added <span className='red'>{title}</span> to {watchList} - {formattedDate}</p>
+            <p><span className='red'>{username}</span>
+            {type[0] === 'r' ? ' removed ' : ' added '}
+            <span className='red'>{title}</span>
+            {type[0] === 'r' ? ' from ' : ' to '}
+            {watchList} - {formattedDate}</p>
         </li>
     );
 }

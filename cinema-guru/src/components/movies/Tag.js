@@ -20,7 +20,7 @@ export default function Tag(props) {
         } else {
             setSelected(true);
             genres.push(genre)
-            setGenres(genres.join(','));
+            setGenres(genres.slice(1).join(','));
         }
     }
 

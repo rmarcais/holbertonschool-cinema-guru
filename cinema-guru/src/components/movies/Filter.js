@@ -7,14 +7,15 @@ import SearchBar from '../general/SearchBar';
 import SelectInput from '../general/SelectInput';
 
 const options = [
+    { value: '', text: "Default"},
     { value: 'latest', text: 'Latest' },
     { value: 'oldest', text: 'Oldest' },
-    { value: 'highestrated', text: 'Highestrated' },
-    { value: 'lowestrated', text: 'Howestrated' },
+    { value: 'highestrated', text: 'Highest rated' },
+    { value: 'lowestrated', text: 'Lowest rated' },
 ];
 
 const tags = ['Action','Drama', 'Comedy', 'Biography', 'Romance', 'Thriller',
-    'War', 'History', 'Sport', 'Sci-fi', 'Documentary', 'Crime', 'Fantasy', ];
+    'War', 'History', 'Sport', 'Sci-Fi', 'Documentary', 'Crime', 'Fantasy', ];
 
 export default function Filter(props) {
     const {
@@ -72,9 +73,15 @@ export default function Filter(props) {
 }
 
 Filter.propTypes = {
-    minYear: PropTypes.number,
+    minYear: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     setMinYear: PropTypes.func,
-    maxYear: PropTypes.number,
+    maxYear: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     setMaxYear: PropTypes.func,
     sort: PropTypes.string,
     setSort: PropTypes.func,

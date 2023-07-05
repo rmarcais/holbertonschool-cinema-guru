@@ -13,7 +13,7 @@ export default function SearchBar(props) {
         <input
         className='search-bar'
         type='search'
-        placeholder='Search...'
+        placeholder='Search movies'
         value={title}
         onChange={handleInput}/>
     );

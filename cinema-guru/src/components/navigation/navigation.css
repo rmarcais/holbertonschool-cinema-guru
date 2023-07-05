@@ -3,7 +3,7 @@
 .header {
     position: fixed;
     width: -webkit-fill-available;
-    z-index: 1;
+    z-index: 2;
     background-color: #161616;
     display: flex;
     justify-content: space-between;
@@ -46,6 +46,7 @@
     height: 100%;
     background-color: #BB000E;
     padding-top: 80px;
+    z-index: 1;
 }
 
 .sidebar.small {

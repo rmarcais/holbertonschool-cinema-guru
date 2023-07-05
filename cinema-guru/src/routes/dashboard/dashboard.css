@@ -6,5 +6,18 @@
 }
 
 .dashboard .movies {
-    padding: 70px 0 0 50px;
+    padding: 100px 70px 0 70px;
+}
+
+.homepage {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.movies-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
 }

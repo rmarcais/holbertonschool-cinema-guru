@@ -19,13 +19,13 @@ export default function SideBar() {
         navigate(`/${pageName}`);
     }
 
-    useEffect(() => { 
+    useEffect(() => {
         const accessToken = localStorage.getItem('accessToken');
         const headers = {authorization: `Bearer ${accessToken}`}
 
         axios.get("http://localhost:8000/api/activity", { headers })
         .then((res) => setActivities(res.data));
-    }, []);
+    }, [showActivitiesboolean]);
 
     return (
         <nav className={small ? 'sidebar small' : 'sidebar'}
@@ -40,13 +40,13 @@ export default function SideBar() {
                     </div>
                     {selected === 'home'&& !small && <FontAwesomeIcon icon={faArrowRight}/>}
                 </li>
-                <li className={selected === 'favourites' ? 'navigation-item active' : 'navigation-item'}
-                onClick={() => {setPage('favourites')}}>
+                <li className={selected === 'favorites' ? 'navigation-item active' : 'navigation-item'}
+                onClick={() => {setPage('favorites')}}>
                     <div>
                         <FontAwesomeIcon icon={faStar}/>
-                        <p>{!small && 'Favourites'}</p>
+                        <p>{!small && 'Favorites'}</p>
                     </div>
-                    {selected === 'favourites' && !small && <FontAwesomeIcon icon={faArrowRight}/>}
+                    {selected === 'favorites' && !small && <FontAwesomeIcon icon={faArrowRight}/>}
                 </li>
                 <li className={selected === 'watchlater' ? 'navigation-item active' : 'navigation-item'}
                 onClick={() => {setPage('watchlater')}}>
