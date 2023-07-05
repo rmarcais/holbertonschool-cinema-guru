@@ -19,8 +19,9 @@ export default function Tag(props) {
             setGenres(genres.filter((g) => g !== genre).join(','));
         } else {
             setSelected(true);
-            genres.push(genre)
-            setGenres(genres.slice(1).join(','));
+            genres.push(genre);
+            const newGenres = genres.filter((g) => g !== '');
+            setGenres(newGenres.join(','));
         }
     }
 

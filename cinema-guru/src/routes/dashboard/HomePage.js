@@ -18,7 +18,7 @@ export default function HomePage() {
         function loadMovies(page) {
             const accessToken = localStorage.getItem('accessToken');
             const headers = {authorization: `Bearer ${accessToken}`};
-            const params = { minYear: 1970, maxYear: 2022, genres, title, sort, page };
+            const params = { minYear, maxYear, genres, title, sort, page };
             axios.get("http://localhost:8000/api/titles/advancedsearch", { headers, params })
             .then((res) => setMovies(res.data.titles));
         }

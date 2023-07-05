@@ -2,6 +2,8 @@ import './dashboard.css';
 import React from 'react';
 import HomePage from './HomePage';
 import PropTypes from 'prop-types';
+import Favorites from './Favorites';
+import WatchLater from './WatchLater';
 import Header from '../../components/navigation/Header';
 import SideBar from '../../components/navigation/SideBar';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -17,8 +19,8 @@ export default function Dashboard(props) {
                 <div className='movies'>
                     <Routes>
                         <Route path='/' element={<HomePage />}/>
-                        <Route path='/favorites' element={<p>FAVORITES</p>}/>
-                        <Route path='/watchlater' element={<p>WATCHLATER</p>}/>
+                        <Route path='/favorites' element={<Favorites />}/>
+                        <Route path='/watchlater' element={<WatchLater />}/>
                         <Route path='/*' element={<Navigate to={"/"}/>} />
                     </Routes>
                 </div>
