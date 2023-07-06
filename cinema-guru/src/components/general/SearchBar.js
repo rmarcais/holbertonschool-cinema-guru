@@ -20,6 +20,11 @@ export default function SearchBar(props) {
 }
 
 SearchBar.propTypes = {
-    title: PropTypes.string.isRequired,
-    setTitle: PropTypes.func.isRequired
+    title: PropTypes.string,
+    setTitle: PropTypes.func
+}
+
+SearchBar.defaultProps = {
+    title: "",
+    setTitle:() => {}
 }

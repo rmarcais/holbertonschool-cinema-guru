@@ -1,8 +1,8 @@
 import './navigation.css';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Header(props) {
     const { userUsername, setIsLoggedIn } = props;

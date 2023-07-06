@@ -29,14 +29,18 @@ export default function SelectInput(props) {
 }
 
 SelectInput.porpTypes = {
-    label: PropTypes.string.isRequired,
-    options: PropTypes.array.isRequired,
+    label: PropTypes.string,
+    options: PropTypes.array,
     Multiple: PropTypes.bool,
-    className: PropTypes.string.isRequired,
+    className: PropTypes.string,
     value: PropTypes.any.isRequired,
-    setValue: PropTypes.func.isRequired
+    setValue: PropTypes.func
 }
 
 SelectInput.defaultProps = {
-    Multiple: false
+    label: "",
+    options: [],
+    Multiple: false,
+    className: "",
+    setValue: () => {}
 }
