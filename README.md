@@ -19,26 +19,137 @@ Hello everyone, in this project I will build a pocket movie app in which we will
 - A README.md file, at the root of the folder of the project, is mandatory
 - Try to use ES6 features
 
+## Api: [Documentation](./routes/README.md)
+
 ## Steps 🪜
 
-### 0: Cloning the [Figma](https://intranet.hbtn.io/rltoken/y6fbJw-Sx3qLJdU1jYbuVw) project
+### **0: Cloning the [Figma](https://intranet.hbtn.io/rltoken/y6fbJw-Sx3qLJdU1jYbuVw) project**
 
 <p align="center">
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2022/4/58de24af3384ecb909b6df472d9f284fa781963d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230706%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230706T083111Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=fe65bc255c1eeefba46320129140a9d6a88c6515a7d34a1ae9587156bccadaf5" alt="figma-project">
+<img src="./images/figma.png" alt="figma-project">
 </p>
 
-### 1: Setting up the workspace
+### **1: Setting up the workspace**
 
-### 2: Adding the general use components
-
-<p align="center">
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2022/4/0ce23be04595b57cae3e1874ad4cf55eac506781.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230706%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230706T083111Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ea77ff2bc39f5d4a156aea900b5e814125218103b4d9797836fee64b227025b4" alt="input-text">
-</p>
+### **2: Adding the general use components**
 
 <p align="center">
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2022/4/a57c34c985df24911cc8ce8e45abfac42ed419ef.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230706%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230706T083111Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8446bb6f481404883c0b56c52bcda648cc01b1459a4e909a3441f8390a61df06" alt="input-number">
+<img src="./images/input-text.gif" alt="input-text">
 </p>
 
 <p align="center">
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2022/4/259edec2bf177c56e6e57516ff759bf1f53af87f.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230706%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230706T083111Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=178eef75e7ab49563a5bfbda3eef81600c86902a6853236f1ce19cb3b5952230" alt="select-input">
+<img src="./images/input-number.gif" alt="input-number">
 </p>
+
+<p align="center">
+<img src="./images/select-input.gif" alt="select-input">
+</p>
+
+<p align="center">
+<img src="./images/button.gif" alt="button">
+</p>
+
+<p align="center">
+<img src="./images/search-bar.gif" alt="search-bar">
+</p>
+
+### **3: Initialize the main App component**
+
+### **4: Authentication - Component behavior**
+
+<p align="center">
+<img src="./images/authentication.gif" alt="authentication">
+</p>
+
+<p align="center">
+<img src="./images/login.png" alt="login">
+</p>
+
+<p align="center">
+<img src="./images/register.png" alt="register">
+</p>
+
+<p align="center">
+<img src="./images/full-authentication.gif" alt="full-authentication">
+</p>
+
+### **5: Authentication: Api integration**
+
+### **6: Navigation - Adding the header**
+
+<p align="center">
+<img src="./images/header.png" alt="header">
+</p>
+
+<p align="center">
+<img src="./images/dashboard.png" alt="dashboard">
+</p>
+
+### **7: Navigation - Sidebar**
+
+<p align="center">
+<img src="./images/activity.png" alt="activity">
+</p>
+
+<p align="center">
+<img src="./images/sidebar.gif" alt="sidebar">
+</p>
+
+<p align="center">
+<img src="./images/result.gif" alt="result">
+</p>
+
+### **8: Dashboard routing**
+
+### **9: Dashboard - Setting up child components**
+
+<p align="center">
+<img src="./images/tag.gif" alt="tag">
+</p>
+
+<p align="center">
+<img src="./images/filter.gif" alt="filter">
+</p>
+
+<p align="center">
+<img src="./images/movie-card.gif" alt="movie-card">
+</p>
+
+### **10: DAshboard - Main pages**
+
+<p align="center">
+<img src="./images/homepage.gif" alt="homepage">
+</p>
+
+<p align="center">
+<img src="./images/favorites.gif" alt="favorites">
+</p>
+
+<p align="center">
+<img src="./images/watchlater.gif" alt="watchlater">
+</p>
+
+## Challenges 💪
+
+- Create an interface according to customer request.
+- Use all accumulated React knowledges.
+- Work with a new Api.
+
+## Tools 🛠️
+
+| React | React Developer Tools | Axios |
+|:---:|:---:|:---:|
+| <img width="50" height="50" src="https://blog.octo.com/wp-content/uploads/2015/12/react-logo-1000-transparent.png"> | <img width="55" height="55" src="https://lh3.googleusercontent.com/TNijZW_Gp9MZ3eqXkve0YWDEiHV-a2IpSpD6IJzrV3Y76GJcLEyzX2regTLemXzBHbHVqkKuxnnWDT34Cp4sNh-Y=w128-h128-e365-rj-sc0x00ffffff"> | <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyAR683MbFwwkdA31UOEYe2SFe-0VpvpkbHw&usqp=CAU"> |
+
+## Cloning the repo ➡️
+
+To clone this repository, you can run this command:
+```
+git clone git@github.com:rmarcais/holbertonschool-cinema-guru.git
+```
+
+## Author 🖊️
+
+| Rémi Marçais (Portfolio projetct [here](https://github.com/rmarcais/Portfolio_project_Motiv)) |
+|:---:|
+| <a href="https://www.linkedin.com/in/r%C3%A9mi-mar%C3%A7ais-274a4421a/"> <img alt="Rémi Marçais Linkedin" width="40px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png"> <a href="https://github.com/rmarcais"> <img alt="Rémi Marçais Github" width="40px" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"> |
